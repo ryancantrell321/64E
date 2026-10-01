@@ -22,13 +22,28 @@ class HomePage extends StatelessWidget {
       ),
 
 
-      body: Text(
-        "hello world",
-        style: GoogleFonts.lobster(
-          fontSize: 20,
-          color: Colors.indigoAccent,
+      body: 
+      // Text(
+      //   "hello world",
+      //   style: GoogleFonts.lobster(
+      //     fontSize: 20,
+      //     color: Colors.indigoAccent,
+      //   ),
+      // ),
+      Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SizedBox(height: 20,),
+            Text("Welcome to 64E", 
+            style: GoogleFonts.aboreto(
+              fontSize: 30,
+              fontWeight: FontWeight.bold,
+              color: Colors.green[900],
+            ),)
+          ],
         ),
-      ),
+      )
     );
   }
 }
