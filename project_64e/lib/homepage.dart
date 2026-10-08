@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:project_64e/homepage.dart';
+import 'package:flutter/services.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+
+class HomePage2 extends StatelessWidget {
+  const HomePage2({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -69,28 +69,56 @@ class HomePage extends StatelessWidget {
               child: Icon(Icons.message),
             ),
 
-      body: Center(child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-        Text(
-          "DELL LENOVO ASUS SAMSUNG MOTOROLA APPLE",
-          style: GoogleFonts.roboto(
-            fontSize: 20,
-            color: Colors.indigoAccent,
-          ),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Row(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: IconButton(
+                onPressed: () => Navigator.pop(context),
+                icon: const Icon(Icons.arrow_back),
+              ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.only(right: 10),
+              child: TextButton(
+                onPressed: () {
+                  
+                },
+                child: const Text("Red"),
+
+              ),
+            ),
+
+            ElevatedButton(
+              onPressed: () {},
+              child: const Text("Green"),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: OutlinedButton(
+                onPressed: () {},
+                child: const Text("Blue"),
+              ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: IconButton(
+                onPressed: () {
+                  SystemSound.play(SystemSoundType.alert);
+                },
+                icon: const Icon(Icons.alarm),
+              ),
+            ),            
+  
+
+          ],
+        ),
       ),
-
-        const Divider(),
-        
-        ElevatedButton(onPressed: () {
-          Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage2()));
-        }, 
-        child: const Text("Next Screen"))
-
-        ]
-      ),)
-
-    
     );
   }
 }

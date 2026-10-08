@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_64e/home_page.dart';
+//import 'package:project_64e/homepage.dart';
 
 void main() {
   runApp(const myApp());
@@ -13,6 +14,7 @@ class myApp extends StatelessWidget {
       theme:ThemeData.light(),
       debugShowCheckedModeBanner: false,
       home: HomePage(),
+      // home: HomePage2(),
       );
 
   }
